@@ -54,7 +54,7 @@ var total = 0;
                     </div>
                     <div class="col">
                         <button class="btn btn-outline-primary" onclick="cargarGasto(${index})" data-bs-toggle="modal" data-bs-target="#editarGasto" >Editar</button>
-                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index}),reinicia()">DEL</button>
+                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})">DEL</button>
                     </div>
                 </div>
             </div>`;
@@ -70,7 +70,7 @@ var total = 0;
                     </div>
                     <div class="col">
                         <button class="btn btn-outline-primary" onclick="cargarGasto(${index})" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#editarGasto" >Editar</button>
-                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})reinicia()">DEL</button>
+                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})">DEL</button>
                     </div>
                 </div>
             </div>`;
@@ -234,7 +234,8 @@ const deleteGasto = (index) => {
             Swal.fire("Eliminado", "", "success");
             gastos.splice(index, 1)
             localStorage.setItem("gastos", JSON.stringify(gastos));
-            mostrarGastos()
+            mostrarGastos();
+            reinicia();
         }
 
     });
@@ -255,7 +256,8 @@ const deleteGasto2 = (index) => {
             Swal.fire("Eliminado", "", "success");
             comida.splice(index, 1)
             localStorage.setItem("comida", JSON.stringify(comida));
-            mostrarGastos()
+            mostrarGastos();
+            reinicia();
         }
 
     });
