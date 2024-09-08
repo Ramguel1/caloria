@@ -21,7 +21,7 @@ const guardarGasto = () => {
     let descripcion = document.getElementById("descripcion").value;
     let costo = parseInt(document.getElementById("costo").value);
     let categoria = document.getElementById("categoria").value;
-    if (descripcion.trim() == "" || document.getElementById("costo").value.trim() === "" || costo == 0 || categoria == "todos") {
+    if (descripcion.trim() == "" || document.getElementById("costo").value.trim() === "" || costo <= 0 || categoria == "todos") {
         Swal.fire({ icon: "error", title: "ERROR", text: "Datos incorrectos maall" });
         return;
     }
@@ -154,7 +154,7 @@ const actualizarGasto2 = () => {
     let categoria = document.getElementById("ecategoria2").value;
 
     let index = parseInt(document.getElementById("eindex2").value);
-    if (descripcion.trim() == "" || costo == 0) {
+    if (descripcion.trim() == "" || costo <= 0) {
         Swal.fire({ icon: "error", title: "mal", text: "Datos incorrectos" });
         return;
 
@@ -193,7 +193,7 @@ const actualizarGasto = () => {
     let costo = parseInt(document.getElementById("ecosto").value);
     let categoria = document.getElementById("ecategoria").value;
     let index = parseInt(document.getElementById("eindex").value);
-    if (descripcion.trim() == "" || costo == 0) {
+    if (descripcion.trim() == "" || costo <= 0) {
         Swal.fire({ icon: "error", title: "mal", text: "Datos incorrectos" });
         return;
 
