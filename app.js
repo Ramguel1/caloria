@@ -54,7 +54,7 @@ var total = 0;
                     </div>
                     <div class="col">
                         <button class="btn btn-outline-primary" onclick="cargarGasto(${index})" data-bs-toggle="modal" data-bs-target="#editarGasto" >Editar</button>
-                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})">DEL</button>
+                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index}),reinicia()">DEL</button>
                     </div>
                 </div>
             </div>`;
@@ -70,7 +70,7 @@ var total = 0;
                     </div>
                     <div class="col">
                         <button class="btn btn-outline-primary" onclick="cargarGasto(${index})" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#editarGasto" >Editar</button>
-                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})">DEL</button>
+                        <button class="btn btn-outline-danger" onclick="deleteGasto(${index})reinicia()">DEL</button>
                     </div>
                 </div>
             </div>`;
