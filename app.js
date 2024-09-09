@@ -81,7 +81,7 @@ var total = 0;
 
     });
 
-    // Mostrar los totales en el DOM
+    
     if (tGastos > 0) {
         let totalGastos = document.querySelector("#TEje");
         totalGastos.innerHTML = `${tGastos.toFixed(2)} C`;
