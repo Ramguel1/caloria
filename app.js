@@ -21,7 +21,7 @@ const guardarGasto = () => {
     let descripcion = document.getElementById("descripcion").value;
     let costo = parseInt(document.getElementById("costo").value);
     let categoria = document.getElementById("categoria").value;
-    if (descripcion.trim() == "" || document.getElementById("costo").value.trim() === "" || costo <= 0 || categoria == "todos") {
+    if (descripcion.trim() == "" || document.getElementById("costo").value.trim() === "" ||  costo <= 0 || categoria == "todos" || descripcion ==/^[A-Za-z]+$/) {
         Swal.fire({ icon: "error", title: "ERROR", text: "Datos incorrectos maall" });
         return;
     }
